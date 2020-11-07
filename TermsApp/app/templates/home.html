@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block content %}
+<div class="jumbo">
+  <h2>Welcome to the Terms and Conditions App<h2>
+  <h3>This is the home page for the Terms and Conditions app<h3>
+  <div class="inputs">
+    <label>Url:</label>
+    <input type="text" id="url" /><br /><br/>
+    <label>Terms and conditions:</label><br />
+    <textarea style="width:600px; height:400px" id="terms" ></textarea><br />
+    <button onclick="validate()">Check</button>
+    <div id="result"></div>
+    <div id="showparagraphs"></div>
+  </div>
+</div>
+{% endblock %}

@@ -15,3 +15,21 @@ function validate() {
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send(JSON.stringify(data));
 }
+
+function myFunction(e) {
+  var id = e.id;
+  var nr = id.split("_")[1];
+  var dots = document.getElementById("dots" + nr);
+  var moreText = document.getElementById("more" + nr);
+  var btnText = document.getElementById("myBtn_" + nr);
+  console.log(nr);
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}

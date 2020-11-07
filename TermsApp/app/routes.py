@@ -17,13 +17,24 @@ def check():
     paragraphs = m["text"].split('\n\n')
     text="<div>"
     sumResult=0
+    i=0
     for p in paragraphs:
-      print(p)
+      #print(p)
       #apelat functia pentru paragraf
+      i+=1
       dict[p]=0
       sumResult+=0
-      text=text+"<div><p>"+p+"</p><label>Result:</label><p>"+str(0)+"</p></div>"
-    print(dict)
+      phrases=p.split('.')
+      print(len(phrases))
+      if(len(phrases)>=2):
+        less = '.'.join(phrases[:1])+". "
+        more = '.'.join(phrases[1:])
+      else:
+        less = phrases[0]+". "
+        more=""
+      print(more)
+      text=text+"<div><p>"+less+"<span id=\"dots"+str(i)+"\">...</span><span style=\"display: none;\"id=\"more"+str(i)+"\">"+more+"</br>Result:</br>"+str(0)+"</span></p></div><button onclick=\"myFunction(this)\" id=\"myBtn_"+str(i)+"\">Read more</button>"
+    #print(dict)
     text+="</div>"
     return text
 

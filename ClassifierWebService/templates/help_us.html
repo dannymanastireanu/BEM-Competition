@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block content %}
+    <h2 style="text-align: center; color: dimgrey">Help us to collect more data and give to you a more accurate assumption about your terms and condition</h2>
+    <form action="/help" method="POST">
+        <label for="terms">Terms and conditions:</label><br />
+        <textarea id="terms" name="terms" style="width:600px; height:400px" ></textarea><br />
+        <label for="optionTm">Choose a value:</label>
+
+        <select name="optionTm" id="optionTm">
+            <option value="good">Good</option>
+            <option value="neutral">neutral</option>
+            <option value="bad">bad</option>
+        </select>
+
+        <button type="submit">Submit your help.</button>
+    </form>
+{% endblock %}

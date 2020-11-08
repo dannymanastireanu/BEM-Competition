@@ -13,7 +13,7 @@ def striphtml(data):
 
 
 def write_in_csv(filename, data, n):
-    with open(filename+'.csv', mode='a+') as wr_file:
+    with open(filename + '.csv', mode='a+') as wr_file:
         scriitor = csv.writer(wr_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         scriitor.writerow([data, n])
 
@@ -53,7 +53,8 @@ def getMatches(driver):
         wait_some_sec()
         try:
             leaf = driver.find_element_by_tag_name("blockquote")
-            my_texts.append(striphtml(leaf.text).replace('Privacy Policy', '').replace('Terms of Service', '').replace('Data Policy', ''))
+            my_texts.append(striphtml(leaf.text).replace('Privacy Policy', '').replace('Terms of Service', '').replace(
+                'Data Policy', ''))
             match.append({'feel': feeling[count], 'clause': my_texts[count]})
             count += 1
         except:
@@ -62,16 +63,15 @@ def getMatches(driver):
 
     return match
 
+
 def wait_some_sec():
     wait_time = random.randint(0, 9)
     print(f"Wait {wait_time}")
     time.sleep(wait_time)
 
-if __name__ == '__main__':
 
-    options = Options()
-    options.add_argument('--headless')
-    driver = webdriver.Chrome("./ph-chrome/chromedriver", chrome_options=options)
+if __name__ == '__main__':
+    driver = webdriver.Chrome("./ph-chrome/chromedriver")
     driver.get('https://tosdr.org/')
 
     all_sites = driver.find_elements_by_xpath("//*[contains(text(), 'More details')]")
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     count = 0
     keep_index = 0
     n_pages = len(all_sites)
-    for i in range(0, n_pages):
+    for i in range(200, 300):
         try:
             wait_some_sec()
             all_sites = driver.find_elements_by_xpath("//*[contains(text(), 'More details')]")
@@ -90,6 +90,7 @@ if __name__ == '__main__':
 
             # WRITE DATA IN CSV_FILE:
             for item in items:
+                print(item)
                 makes_decision(item['feel'], item['clause'])
 
             count += 1

@@ -8,3 +8,7 @@ What we successfully did:
 - User interface to communicate with own web api
 
 In the largest proportion the functionalities being implemented by us
+
+Update:
+1st place at hackathon.
+<embed src="https://github.com/dannymanastireanu/BEM-Competition/blob/main/locul1_ey_Manastireanu%20Andrei-Dany.pdf" alt="1st" width="800px" height="2100px" />

@@ -12,4 +12,6 @@ In the largest proportion the functionalities being implemented by us
 Update:
 # 1st place at hackathon.
 <embed src="https://github.com/dannymanastireanu/BEM-Competition/blob/main/locul1_ey_Manastireanu%20Andrei-Dany.pdf" type="application/pdf" alt="1st" width="800px" height="2100px" />
-![prove](https://media.discordapp.net/attachments/770775828925120593/774984509954588672/unknown.png)
+<p align="center">
+<img src="https://media.discordapp.net/attachments/770775828925120593/774984509954588672/unknown.png" alt="prove" class="center">
+</p>

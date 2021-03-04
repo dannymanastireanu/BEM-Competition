@@ -15,3 +15,8 @@ Update:
 <p align="center">
 <img src="https://media.discordapp.net/attachments/770775828925120593/774984509954588672/unknown.png" alt="prove" class="center">
 </p>
+
+Members:
+- Gabriel Giurgica
+- Dany Manastireanu
+- Claudiu Zalinca
